@@ -3,6 +3,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(""),
     url("../fonts/montserrat/montserrat-v15-latin-regular.woff2")
       format("woff2"),
@@ -15,6 +16,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: local(""),
     url("../fonts/montserrat/montserrat-v15-latin-500.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -25,6 +27,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: local(""),
     url("../fonts/montserrat/montserrat-v15-latin-600.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -35,6 +38,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(""),
     url("../fonts/montserrat/montserrat-v15-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -45,6 +49,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src: local(""),
     url("../fonts/montserrat/montserrat-v15-latin-800.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -111,9 +116,36 @@ ul {
   border-radius: 999px;
 }
 
+.btn_la::after {
+  content: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 5C0 4.81059 0.079009 4.62895 0.219646 4.49502C0.360282 4.36108 0.551026 4.28584 0.749916 4.28584H9.43845L6.21831 1.22068C6.07749 1.08658 5.99838 0.904705 5.99838 0.715059C5.99838 0.525414 6.07749 0.343536 6.21831 0.209436C6.35912 0.0753365 6.5501 0 6.74925 0C6.94839 0 7.13937 0.0753365 7.28019 0.209436L11.7797 4.49438C11.8495 4.56072 11.9049 4.63952 11.9427 4.72629C11.9805 4.81305 12 4.90606 12 5C12 5.09394 11.9805 5.18695 11.9427 5.27371C11.9049 5.36048 11.8495 5.43928 11.7797 5.50562L7.28019 9.79056C7.13937 9.92466 6.94839 10 6.74925 10C6.5501 10 6.35912 9.92466 6.21831 9.79056C6.07749 9.65646 5.99838 9.47459 5.99838 9.28494C5.99838 9.0953 6.07749 8.91342 6.21831 8.77932L9.43845 5.71416H0.749916C0.551026 5.71416 0.360282 5.63892 0.219646 5.50499C0.079009 5.37106 0 5.18941 0 5Z' fill='white'/%3E%3C/svg%3E%0A");
+  display: inline-block;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.btn_la:hover::after {
+  transform: translate(3px, 0);
+}
+
 .btn_transparent {
   border-radius: 999px;
   border: 1px solid #fff;
+}
+
+.s-title {
+  font-weight: bold;
+  font-size: 40px;
+  color: #fff;
+  max-width: 455px;
+  text-align: center;
+}
+
+.s-subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  max-width: 470px;
+  color: #fff;
+  text-align: center;
 }
 
 /* header */
@@ -195,7 +227,6 @@ ul {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  
 }
 
 .header__menu-item:last-child {
@@ -264,6 +295,13 @@ ul {
   color: #fff;
 }
 
+@media (max-width: 560px) {
+  .promo {
+    padding-top: 140px;
+    padding-bottom: 35px;
+  }
+}
+
 .promo__info-block {
   display: flex;
   flex-direction: column;
@@ -285,6 +323,13 @@ ul {
   margin-bottom: 35px;
 }
 
+@media (max-width: 560px) {
+  .promo__title {
+    font-size: 11vw;
+    text-align: center;
+  }
+}
+
 .promo__info-txt {
   font-weight: 500;
   font-size: 20px;
@@ -292,11 +337,35 @@ ul {
   margin-bottom: 35px;
 }
 
+@media (max-width: 560px) {
+  .promo__info-txt {
+    text-align: center;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .promo__btns {
+}
+
+@media (max-width: 560px) {
+  .promo__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .promo__cta {
   margin-right: 10px;
+}
+
+@media (max-width: 560px) {
+  .promo__cta {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .promo__learn-more {
@@ -310,14 +379,20 @@ ul {
   width: calc(100% / 12 * 6 - var(--gutter) * 2);
   margin-right: var(--gutter);
   margin-left: var(--gutter);
-  
 }
 
 @media (max-width: 920px) {
-  .promo__bg-block{
+  .promo__bg-block {
     padding-top: 50px;
     padding-bottom: 50px;
     width: calc(100% - var(--gutter) * 2);
+  }
+}
+
+@media (max-width: 560px) {
+  .promo__bg-block {
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
 }
 
@@ -362,11 +437,11 @@ ul {
   0% {
     transform: translate(0, -50%);
   }
-  
+
   50% {
     transform: translate(0, -50%) rotate(1turn) scale(1.2);
   }
-  
+
   100% {
     transform: translate(0, -50%);
   }
@@ -376,11 +451,11 @@ ul {
   0% {
     transform: translate(0, -50%);
   }
-  
+
   50% {
     transform: translate(0, -50%) rotate(1turn);
   }
-  
+
   100% {
     transform: translate(0, -50%);
   }
@@ -396,4 +471,107 @@ ul {
     transform: translate(0, 0);
     opacity: 1;
   }
+}
+
+/* pluses */
+.pluses {
+  background: var(--dark-background-color);
+  padding-top: 140px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+@media (max-width: 920px) {
+  .pluses{
+    padding-top: 75px;
+  }
+}
+
+.pluses__title {
+  /* max-width: 435px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 560px) {
+  .pluses__title br{
+    display: block;
+  }
+}
+
+.pluses__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 920px) {
+  .pluses__subtitle {
+    margin-bottom: 45px;
+  }
+  
+}
+
+.pluses__card {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 560px) {
+  .pluses__card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.plus-card {
+  position: relative;
+  width: calc(100% / 12 * 4 - var(--gutter) * 2);
+  color: #fff;
+  border: 1px solid #f2f2f2;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 27px;
+  padding-left: 88px;
+  border-radius: 2px;
+  word-break: break-word;
+}
+
+@media (max-width: 560px) {
+  .plus-card {
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 920px) {
+  .plus-card {
+    width: calc(100% / 12 * 6 - var(--gutter) * 2);
+  }
+}
+
+@media (max-width: 560px) {
+  .plus-card {
+    width: calc(100% - var(--gutter) * 2);
+  }
+}
+
+.plus-card__ico {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  max-width: 50px;
+}
+
+.plus-card__title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.plus-card__subtitle {
+  font-weight: 500;
+  font-size: 14px;
 }
