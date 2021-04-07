@@ -64,6 +64,7 @@
   --gutter: 15px;
   --dark-background-color: #252b42;
   --primary-color: #23a6f0;
+  --grey: #737373;
 }
 
 body {
@@ -146,6 +147,12 @@ ul {
   max-width: 470px;
   color: #fff;
   text-align: center;
+}
+
+@media (max-width: 560px) {
+  .s-subtitle {
+    max-width: 262px;
+  }
 }
 
 /* header */
@@ -482,7 +489,7 @@ ul {
 }
 
 @media (max-width: 920px) {
-  .pluses{
+  .pluses {
     padding-top: 75px;
   }
 }
@@ -495,7 +502,7 @@ ul {
 }
 
 @media (max-width: 560px) {
-  .pluses__title br{
+  .pluses__title br {
     display: block;
   }
 }
@@ -510,7 +517,6 @@ ul {
   .pluses__subtitle {
     margin-bottom: 45px;
   }
-  
 }
 
 .pluses__card {
@@ -524,8 +530,6 @@ ul {
     margin-bottom: 0;
   }
 }
-
-
 
 .plus-card {
   position: relative;
@@ -574,4 +578,202 @@ ul {
 .plus-card__subtitle {
   font-weight: 500;
   font-size: 14px;
+}
+
+/* reviews */
+.reviews {
+  background: var(--dark-background-color);
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+@media (max-width: 560px) {
+  .reviews {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+}
+
+.reviews__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.reviews__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 560px) {
+  .reviews__subtitle {
+    margin-bottom: 60px;
+  }
+}
+
+.reviews__slider {
+  max-width: 744px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+/* review-card  */
+
+.review-card {
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.review-card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 435px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-card__img {
+  margin-bottom: 30px;
+}
+
+.review-card__desc {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--grey);
+}
+
+.review-card__rate {
+  margin-bottom: 15px;
+}
+
+.review-card__name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.review-card__position {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--grey);
+}
+
+/* app */
+.app {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: var(--dark-background-color);
+}
+
+.app__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.app__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.app__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+@media (max-width: 920px) {
+  .app__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .app__row {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+}
+
+.app__card {
+  position: relative;
+  border: 1px solid #bdbdbd;
+  padding-top: 18px;
+  padding-right: 28px;
+  padding-bottom: 18px;
+  color: #fff;
+  border-radius: 10px;
+  background: var(--dark-background-color);
+}
+
+@media (max-width: 560px) {
+  .app__card {
+    background-color: #fff;
+    color: var(--dark-background-color);
+  }
+}
+
+.app__card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 26px;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 560px) {
+  .app__card::before {
+    background-color: var(--dark-background-color);
+  }
+}
+
+.app__card_apple::before {
+  -webkit-mask-image: url(../img/app/apple.svg);
+  mask-image: url(../img/app/apple.svg);
+}
+
+.app__card-txt {
+  font-weight: bold;
+  font-size: 16px;
+  width: 60%;
+  margin-left: auto;
+}
+
+.app__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.app__card_google::before {
+  -webkit-mask-image: url(../img/app/google.svg);
+  mask-image: url(../img/app/google.svg);
+}
+
+.app__card_amazon::before {
+  -webkit-mask-image: url(../img/app/amazon.svg);
+  mask-image: url(../img/app/amazon.svg);
+}
+
+.app__card_windows::before {
+  -webkit-mask-image: url(../img/app/wind.svg);
+  mask-image: url(../img/app/wind.svg);
 }
