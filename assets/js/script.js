@@ -10,3 +10,6 @@ burgerEl.addEventListener('click', function(event) {
 var swiper = new Swiper('.reviews__slider', {
   loop: true,
 });
+
+// scroll animation
+AOS.init();
