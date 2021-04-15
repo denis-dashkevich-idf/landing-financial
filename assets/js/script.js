@@ -7,7 +7,7 @@ burgerEl.addEventListener('click', function(event) {
 });
 
 // slider
-var swiper = new Swiper('.reviews__slider', {
+let swiper = new Swiper('.reviews__slider', {
   loop: true,
 });
 
