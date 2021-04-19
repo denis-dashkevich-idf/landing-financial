@@ -289,6 +289,14 @@ ul {
   }
 }
 
+/* 
+*
+*
+* index page
+*
+*
+*/
+
 /* promo */
 .promo {
   padding-top: 184px;
@@ -1167,4 +1175,114 @@ ul {
   background-color: #eaeef2;
   border-radius: 3px;
   transition: background-color 0.3s, background-position 0.3s;
+}
+
+/* footer */
+.footer {
+}
+.footer__info-block {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: var(--dark-background-color);
+}
+@media (max-width: 768px) {
+  .footer__info-block {
+    padding-bottom: 40px;
+  }
+}
+.footer__column {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+  width: calc(100% / 12 * 3 - var(--gutter) * 2);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer__column {
+    width: calc(100% / 12 * 4 - var(--gutter) * 2);
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 560px) {
+  .footer__column {
+    width: calc(100% / 12 * 8 - var(--gutter) * 2);
+    margin-left: calc(100% / 12 * 3 - var(--gutter));
+  }
+}
+.footer__column-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.footer__col-text {
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.footer__socials {
+}
+.footer__social-link {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+.footer__social-link:last-child {
+  margin-right: 0;
+}
+.footer__social-link:hover .footer__social-img path {
+  fill: tomato;
+}
+.footer__social-img {
+  width: 24px;
+}
+.footer__nav {
+}
+.footer__menu {
+  list-style: none;
+}
+.footer__menu-item {
+  margin-bottom: 10px;
+}
+
+.footer__menu-item:last-child {
+  margin-bottom: 0;
+}
+.footer__menu-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+.footer__copyright-block {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.footer__copyright {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--grey);
+}
+
+.footer__copyright br {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .footer__copyright br {
+    display: block;
+  }
+}
+
+
+/* 
+*
+*
+*contacts page
+*
+*
+*/
+.ip-contacts {
+  
 }
