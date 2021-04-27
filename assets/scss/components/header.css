@@ -1,0 +1,145 @@
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--dark-background-color);
+  z-index: 9;
+}
+
+@media (max-width: 920px) {
+  .header {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu-wrap {
+  margin-right: auto;
+  margin-left: 10%;
+  margin-left: 7%;
+}
+
+@media (max-width: 920px) {
+  .header__menu-wrap {
+    display: none;
+    margin-left: 0;
+  }
+}
+
+.header__menu-wrap_visible {
+  display: block;
+  width: 100%;
+  padding-top: 30px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+@media (max-width: 920px) {
+  .header__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header__menu-item {
+  margin-right: 20px;
+}
+
+@media (max-width: 920px) {
+  .header__menu-item {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.header__menu-item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 920px) {
+  .header__menu-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header__item-link {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.header__customer-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 920px) {
+  .header__customer-area {
+    margin-left: auto;
+  }
+}
+
+.header__theme-switch {
+  margin-right: 15px;
+}
+
+.header__login-link {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-right: 45px;
+}
+
+@media (max-width: 920px) {
+  .header__cta {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .header__burger {
+    display: block;
+  }
+}
+/*# sourceMappingURL=header.css.map */
